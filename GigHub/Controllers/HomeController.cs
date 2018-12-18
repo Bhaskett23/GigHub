@@ -17,15 +17,16 @@ namespace GigHub.Controllers
         }
         public ActionResult Index()
         {
-            var upcomingGigs = _context.Gigs.Include(x => x.Artist).Include(x => x.Genre).Where(x => x.DateTime > DateTime.Now);
+            var upcomingGigs = _context.Gigs.Include(x => x.Artist).Include(x => x.Genre).Where(x => x.DateTime > DateTime.Now).ToList();
 
-            var viewModel = new HomeViewModel
+            var viewModel = new GigsViewModel
             {
                 UpcomingGigs = upcomingGigs,
-                ShowActions = User.Identity.IsAuthenticated
+                ShowActions = User.Identity.IsAuthenticated,
+                Heading = "Upcoming Gigs"
             };
 
-            return View(viewModel);
+            return View("Gigs" ,viewModel);
         }
 
         public ActionResult About()
