@@ -181,11 +181,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\Api\GigsController.cs" />
+    <Compile Include="Controllers\Api\AttendancesController.cs" />
     <Compile Include="Controllers\FolloweeController.cs" />
-    <Compile Include="Controllers\FollowingsController.cs" />
+    <Compile Include="Controllers\Api\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Migrations\201812280327201_AddIsCancelled.cs" />
+    <Compile Include="Migrations\201812280327201_AddIsCancelled.Designer.cs">
+      <DependentUpon>201812280327201_AddIsCancelled.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\ArtistFollowingViewModel.cs" />
     <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -252,6 +257,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812120212034_FixingNewTable.resx">
       <DependentUpon>201812120212034_FixingNewTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812280327201_AddIsCancelled.resx">
+      <DependentUpon>201812280327201_AddIsCancelled.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
